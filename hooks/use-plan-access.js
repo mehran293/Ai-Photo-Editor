@@ -35,15 +35,14 @@ export function usePlanAccess() {
   };
 
   // Check if user has reached project limits
-  const canCreateProject = (currentProjectCount) => {
-    if (isPro) return true;
-    return currentProjectCount < 3; // Free limit
+ const canCreateProject = (currentProjectCount) => {
+    return true; // All users can create unlimited projects
+  
   };
 
   // Check if user has reached export limits
   const canExport = (currentExportsThisMonth) => {
-    if (isPro) return true;
-    return currentExportsThisMonth < 20;
+    return true; // All users can export unlimited times
   };
 
   return {
