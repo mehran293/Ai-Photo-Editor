@@ -59,23 +59,21 @@ const TOOLS = [
     label: "Text",
     icon: Text,
   },
+
   {
     id: "background",
     label: "AI Background",
     icon: Palette,
-    proOnly: true,
   },
   {
     id: "ai_extender",
     label: "AI Image Extender",
     icon: Maximize2,
-    proOnly: true,
   },
   {
     id: "ai_edit",
     label: "AI Editing",
     icon: Eye,
-    proOnly: true,
   },
 ];
 
@@ -123,7 +121,7 @@ export function EditorTopBar({ project }) {
 
   // Use the loading states from the hooks
   const { mutate: updateProject, isLoading: isSaving } = useConvexMutation(
-    api.projects.updateProject
+    api.projects.updateProject,
   );
   const { data: user } = useConvexQuery(api.users.getCurrentUser);
 
