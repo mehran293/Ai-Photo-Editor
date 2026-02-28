@@ -16,9 +16,10 @@ export function usePlanAccess() {
     text: true,
 
     // Pro-only tools
-    background: isPro,
-    ai_extender: isPro,
-    ai_edit: isPro,
+    // Pro-only tools
+    background: true,
+    ai_extender: true,
+    ai_edit: true,
   };
 
   // Helper function to check if user has access to a specific tool
